@@ -1,0 +1,39 @@
+
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Products</h1>
+
+<br   />
+
+ 
+<%= link_to "New Product", new_product_path, :class => "btn btn-success btn-xm ", :remote => true, "data-toggle" => "modal", "data-target" => "#my-modal" %>
+
+   <div class="modal fade" id="my-modal" title="My modal">
+
+     <div class="modal-dialog">
+        <div class="modal-content">
+
+  <div class="modal-header">
+    <button aria-hidden="true" class="close" data-dismiss="modal" type="button">×</button>
+    <!--<h3 id="myModalLabel">New Product</h3> -->
+  </div>
+  <div id="product_modal" class="modal-body a-unique-class">
+    
+  </div>
+  
+</div>
+</div>
+</div>
+
+
+
+ <div id="products">
+  <%= render @products %>
+</div>
+
+<div id="product-form" style="display:none;"></div>
+
+
+
+
+

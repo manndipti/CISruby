@@ -1,0 +1,42 @@
+<% if notice %>
+<p id="notice"><%= notice %></p> <% end %>
+<div class="cart_title">Your Food Cart</div>
+<br    />
+<div class= "panel-body">
+<table>
+<% @cart.line_items.each do |item| %> 
+
+
+<tr>
+	
+<td><%= item.quantity %> &times;</td>
+<td> <%= item.product.product_title %></td>
+<td class="item_price"><%= number_to_currency(item.total_price) %></td>
+</tr>
+
+
+<% end %> 
+<tr class="total_line">
+	<td colspan="2">Total</td>
+<td class="total_cell">
+	<%= number_to_currency(@cart.total_price) %></td> 
+</tr>
+</table>
+<br  />
+<div>
+</div>
+</div>
+<div class= "panel-body">
+<span><%= link_to "Checkout", new_order_path, method: :get, 
+class: 'btn btn-primary btn-xm'  %> 
+<%= link_to 'Empty cart', @cart, method: :delete, 
+confirm: 'Are you sure?', class: 'btn btn-danger btn-xm' %></span>
+
+</div>
+
+
+<br  />
+
+<%= link_to 'Edit', stores_url %> |
+<%= link_to 'Back', carts_path %>
+

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  caterer_name: MyString
+  product_title: MyString
+  description: MyText
+  image_url: MyString
+  cuisine: MyString
+  price: 9.99
+
+two:
+  caterer_name: MyString
+  product_title: MyString
+  description: MyText
+  image_url: MyString
+  cuisine: MyString
+  price: 9.99
